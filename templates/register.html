@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% load widget_tweaks %}
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -39,32 +40,54 @@
         </div>
     </nav>
 
+    
 
-    <div id="input">
 
+    <form method="post">
+      {% csrf_token %}
+
+      <div id="input">
         <div class="input-group mb-4">
-            <span class="input-group-text">&#127912;</span>
-            <input type="text" class="form-control" placeholder="Nome do evento" aria-label="Username">
-        </div>
-        
-        <div class="input-group mb-4">
-            <span class="input-group-text">&#127968;</span>
-            <input type="text" class="form-control" placeholder="Local do evento" aria-label="Username">
-        </div>
-        
-        <div class="input-group mb-4">
-            <span class="input-group-text">Dia</span>
-            <input type="date" class="form-control" placeholder="tempo" aria-label="Username">
-        </div>
-        
-        <div class="input-group mb-4">
-            <span class="input-group-text">Hora</span>
-            <input type="time" class="form-control" placeholder="tempo" aria-label="Username">
+
+          {% render_field form.user type="text"  class="form-control" placeholder="Usuario" aria-label="Username" name="user" %}
+
+               
         </div>
 
-        <button type="button" class="btn btn-success">Criar evento</button>
+        <div class="input-group mb-4">
+          <span class="input-group-text">&#127912;</span>
+          
+          {% render_field form.event_name type="text" class="form-control" placeholder="Nome do evento" aria-label="Username" name="nome" %}
 
-    </div>
+        </div>
+          
+        <div class="input-group mb-4">
+          <span class="input-group-text">&#127968;</span>
+          
+          {% render_field form.local type="text" class="form-control" placeholder="Local do evento" aria-label="Username" name="local" %}
+        </div>
+          
+        <div class="input-group mb-4">
+          <span class="input-group-text">Dia</span>
+  
+          {% render_field form.day type="date" class="form-control" placeholder="tempo" aria-label="Username" name="dia" %}
+
+        </div>
+
+        <div class="input-group mb-4">
+          <span class="input-group-text">Hora</span>
+  
+          {% render_field form.hour type="time" class="form-control" placeholder="tempo" aria-label="Username" name="dia" %}
+
+        </div>
+
+        <button type="submit" class="btn btn-success">Criar evento</button>
+
+      </div>
+
+    </form>
+
+    
 
 
 

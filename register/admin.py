@@ -1,3 +1,4 @@
 from django.contrib import admin
+from register.models import ticket
 
-# Register your models here.
+admin.site.register(ticket)

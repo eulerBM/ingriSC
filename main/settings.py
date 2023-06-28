@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'home',
     'register',
     'eventos',
+
+    #'widget_tweaks',
+    'widget_tweaks',
 ]
 
 SITE_ID = 1
