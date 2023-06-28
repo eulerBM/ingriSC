@@ -1,0 +1,21 @@
+#body {
+    background-color: rgba(49, 0, 129, 0.651);
+}
+
+#input {
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translateY(-50%); 
+    
+}
+
+
+  
+#input button {
+    margin-top: 1rem;
+    margin-left: 40%;
+    
+    
+}

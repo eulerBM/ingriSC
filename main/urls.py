@@ -7,7 +7,7 @@ from eventos.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
-    path('', home),
+    path('', home, name='home'),
     path('register/', register, name='register'),
     path('eventos', eventos, name='evento')
 

@@ -1,13 +1,76 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrar evento</title>
-</head>
-<body>
 
-    <h1>Registre um evento aqui</h1>
+    <link href=" {% static 'css/register.css' %}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+</head>
+<body id='body'>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand">IngriSC</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="{% url 'home'%}">Principal</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" >Fazer um evento</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'evento'%}">Meus eventos</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Procurar evento" aria-label="Search">
+              <button class="btn btn-outline-light" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+
+
+    <div id="input">
+
+        <div class="input-group mb-4">
+            <span class="input-group-text">&#127912;</span>
+            <input type="text" class="form-control" placeholder="Nome do evento" aria-label="Username">
+        </div>
+        
+        <div class="input-group mb-4">
+            <span class="input-group-text">&#127968;</span>
+            <input type="text" class="form-control" placeholder="Local do evento" aria-label="Username">
+        </div>
+        
+        <div class="input-group mb-4">
+            <span class="input-group-text">Dia</span>
+            <input type="date" class="form-control" placeholder="tempo" aria-label="Username">
+        </div>
+        
+        <div class="input-group mb-4">
+            <span class="input-group-text">Hora</span>
+            <input type="time" class="form-control" placeholder="tempo" aria-label="Username">
+        </div>
+
+        <button type="button" class="btn btn-success">Criar evento</button>
+
+    </div>
+
+
+
+   
+
+    
     
 </body>
 </html>

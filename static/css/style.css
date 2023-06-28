@@ -1,0 +1,45 @@
+#body {
+    background-color: rgba(49, 0, 129, 0.651);
+}
+
+#photo {
+    border-radius: 2%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0px 50px rgb(0, 0, 0);
+}
+
+#text1 {
+    position: absolute;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+    top: 35%;
+    text-align: center;
+    font-size: larger;
+    width: 25%;
+    height: 22%;
+    color: white;
+    box-shadow: 0 0px 20px rgb(0, 0, 0);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.664);
+
+}
+
+#text2 {
+    position: absolute;
+    font-size: x-large;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    top: 35%;
+    left: 75%;
+    text-align: center;
+    width: 25%;
+    height: 22%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 0px 20px rgb(0, 0, 0);
+
+}
