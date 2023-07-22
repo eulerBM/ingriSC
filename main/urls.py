@@ -9,6 +9,6 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('', home, name='home'),
     path('register/', register, name='register'),
-    path('eventos', eventos, name='evento')
+    path('eventos', my_eventos, name='evento')
 
 ]

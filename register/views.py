@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from register.forms import forms_event
 
@@ -11,7 +11,7 @@ def register(request):
         if form.is_valid(): 
             form.save()
 
-            return render (request, 'register.html', {'form': forms_event()})
+            return redirect('register')
         
     else:
         return render (request, 'register.html', {'form': forms_event()})

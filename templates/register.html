@@ -47,11 +47,16 @@
       {% csrf_token %}
 
       <div id="input">
+        <div class="input-group">
+
         <div class="input-group mb-4">
-
-          {% render_field form.user type="text"  class="form-control" placeholder="Usuario" aria-label="Username" name="user" %}
-
-               
+          <span class="input-group-text">@</span>
+        
+          <input class="form-control" type="text" placeholder="Usuario" aria-label="Username" value="{{ request.user }}" readonly disabled>
+  
+        </div>
+        
+          
         </div>
 
         <div class="input-group mb-4">
